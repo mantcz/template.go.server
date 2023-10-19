@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[PROJECT] | Very important website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #007d9c;
+        --secondary: #c20114;
+        --dark: #0c120c;
+        --gray: #c7d6d5;
+        --gray-light: #ecebf3;
+        --gray-dark: #374151;
+        --gray-darker: #1f2937;
+        --gray-darkest: #111827;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100"
+    style="
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+    "
+  >
+    <main class="w-full h-screen">
+      {{template "page"}}
+    </main>
+  </body>
+</html>

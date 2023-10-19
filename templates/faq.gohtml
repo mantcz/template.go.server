@@ -1,0 +1,17 @@
+{{define "page"}}
+<h1 class="text-6xl font-light mb-4">FAQ</h1>
+<ul>
+  {{range .}}
+  {{template "qa" .}}
+  {{
+    end
+  }}
+</ul>
+{{ end }}
+
+{{define "qa"}}
+<li>
+  <b>{{.Question}}</b>
+  <p>{{.Answer}}</p>
+</li>
+{{ end }}

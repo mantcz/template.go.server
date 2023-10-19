@@ -1,0 +1,49 @@
+{{define "page"}}
+<div class="flex flex-grow min-h-full">
+  <div class="bg-[var(--primary)] w-[50%] flex justify-center items-center">
+    <p class="text-[3rem] text-white">🍩 [PROJECT]</p>
+  </div>
+
+  <div class="border-5 border-red w-[50%] flex justify-center items-center">
+    <div>
+      <h1 class="text-6xl font-light mb-4">Sign up</h1>
+
+      <form action="/users" method="post" class="flex flex-col w-[300px]">
+        <label for="email" class="text-sm text-gray-600">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          class="mb-4 border border-gray-400 rounded-full px-4 py-2"
+          placeholder="Email"
+          required
+          autocomplete="email"
+          autofocus
+        />
+
+        <label for="password" class="text-sm text-gray-600">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="mb-4 border border-gray-400 rounded-full px-4 py-2"
+          placeholder="Password"
+          required
+        />
+
+        <button
+          type="submit"
+          class="border border-[var(--secondary)] my-4 px-8 py-2 bg-[var(--secondary)] hover:bg-indigo-800 text-white rounded-full"
+        >
+          Sign up
+        </button>
+      </form>
+
+      <p class="mt-8">
+        Already have an account?
+        <a href="/auth/login" class="underline text-gray-600"> Sign in</a>
+      </p>
+    </div>
+  </div>
+</div>
+{{ end }}

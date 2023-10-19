@@ -1,0 +1,58 @@
+{{define "header"}}
+<header
+  class="mb-8 px-8 bg-[var(--primary)]"
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid teal;
+    width: 100%;
+    height: 60px;
+    color: white;
+  "
+>
+  <a href="/">🏓 [PROJECT]</a>
+  <div class="flex">
+    <nav class="flex items-center">
+      <a class="hover:text-[var(--secondary)]" href="/">Home</a>
+      <a class="ml-4 hover:text-[var(--secondary)]" href="/pricing">Pricing</a>
+      <a class="ml-4 hover:text-[var(--secondary)]" href="/faq">FAQ</a>
+      <a class="ml-4 hover:text-[var(--secondary)]" href="/contact">Contact</a>
+    </nav>
+
+    <input
+      type="text"
+      class="border border-gray-400 rounded-full px-4 py-1 ml-4"
+      placeholder="Search"
+    />
+
+    <a
+      href="/auth/login"
+      class="ml-2 px-3 py-2 hover:underline hover:underline-offset-8 hover:decoration-4 decoration-[var(--secondary)] text-[var(--white)] rounded"
+    >
+      Log in
+    </a>
+    <a
+      class="ml-2 px-8 pb-1 pt-2 bg-[var(--secondary)] hover:bg-indigo-800 text-white rounded-full"
+      href="/auth/signup"
+    >
+      Join
+    </a>
+  </div>
+</header>
+{{ end }}
+
+{{define "footer"}}
+<footer
+  class="mt-8 p-8 text-white bg-[var(--primary)]"
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  "
+>
+  <p>Copyright &copy; [PROJECT] {{ .Now.Year }}</p>
+</footer>
+{{ end }}
